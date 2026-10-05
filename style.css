@@ -548,3 +548,11 @@ footer{font-size:8px;padding:18px 4.5vw}
   .final h2{font-size:40px}
   footer{font-size:7px;text-align:center;display:flex;gap:7px}
 }
+
+/* LIVE CONTRACT / HOLDER UPDATE */
+.contract-value { font-size: 12px; letter-spacing: .02em; overflow-wrap: anywhere; }
+.live-card { margin: 18px auto 0; border: 1px solid rgba(115,255,83,.32); padding: 12px 18px; display:flex; align-items:center; gap:16px; max-width:520px; background: rgba(0,255,80,.025); }
+.live-card span, .live-card small { font-size: 10px; letter-spacing: .16em; opacity: .7; }
+.live-card strong { font-family: 'VT323', monospace; font-size: 30px; line-height:1; letter-spacing:.04em; }
+.live-card small { margin-left:auto; }
+@media (max-width: 680px) { .live-card { gap:10px; flex-wrap:wrap; } .live-card small { margin-left:0; width:100%; } .contract-value { font-size:10px; } }
