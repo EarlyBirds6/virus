@@ -44,3 +44,292 @@ footer{border-top:1px solid #123e27;padding:20px 5vw;display:flex;justify-conten
 @keyframes float{50%{transform:translateY(-10px)}}@keyframes blink{50%{opacity:0}}@keyframes pulse{50%{opacity:.25;transform:scale(.6)}}
 @media(max-width:850px){.nav{padding:0 20px}.nav nav,.nav-code{display:none}.hero{min-height:800px}.virus-orb{width:240px;height:240px;top:110px}.spike{transform-origin:15px 168px;left:105px}.hero-copy{top:365px}.hero-copy h1{font-size:78px}.eyebrow{font-size:10px}.side-copy{display:none}.earth{width:700px}.status-bar{margin:0 20px;grid-template-columns:1fr 1fr}.status-bar>div:nth-child(2){border-right:0}.status-bar>div:nth-child(3){border-top:1px solid rgba(57,255,136,.2)}.status-bar>div:nth-child(4){border-top:1px solid rgba(57,255,136,.2)}.steps{grid-template-columns:1fr;gap:24px}.arrow{transform:rotate(90deg)}.about,.console{grid-template-columns:1fr;gap:35px}.log{margin:0 20px 70px;grid-template-columns:1fr}.log-face{display:none}.final h2{font-size:42px}footer{flex-direction:column;gap:10px;text-align:center}}
 @media(max-width:480px){.hero{min-height:730px}.virus-orb{width:190px;height:190px;top:105px}.orb-core:before,.orb-core:after{top:73px;width:40px;height:20px}.orb-core:before{left:35px}.orb-core:after{right:35px}.spike{left:80px;top:-55px;transform-origin:15px 150px}.hero-copy{top:310px}.hero-copy h1{font-size:61px;letter-spacing:.25em}.eyebrow{font-size:8px;letter-spacing:.25em}.tagline{font-size:11px;padding:12px 18px}.earth{width:520px;height:330px;bottom:-220px}.hero-cta{bottom:45px}.button{padding:14px 18px;font-size:10px}.status-bar{margin:0 12px}.status-bar>div{padding:13px 12px}.status-bar small{font-size:8px}.status-bar b{font-size:10px}.section{padding:90px 20px}.manifesto h2{font-size:48px}.big-ascii{height:260px}.mini-virus{font-size:120px}.console{padding-top:0}.final{min-height:420px}.final h2{font-size:34px}footer{font-size:8px}}
+
+
+/* ---------- 2026 visual pass: stronger type, clearer hierarchy, less "AI landing page" ---------- */
+:root{
+  --green:#4dff91;
+  --green-soft:#9dffc0;
+  --green-dark:#123e26;
+  --black:#010302;
+  --panel:#030805;
+  --text:#c7f6d5;
+}
+
+body{
+  font-size:14px;
+  background:
+    radial-gradient(circle at 50% 18%,rgba(48,255,126,.075),transparent 27%),
+    #010302;
+}
+
+body:after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:18;
+  opacity:.16;
+  background:
+    linear-gradient(90deg,transparent 0 49.8%,rgba(77,255,145,.08) 50%,transparent 50.2%),
+    linear-gradient(0deg,transparent 0 49.8%,rgba(77,255,145,.05) 50%,transparent 50.2%);
+  background-size:80px 80px;
+}
+
+.nav{
+  height:76px;
+  padding:0 clamp(20px,5vw,72px);
+  border-bottom:1px solid rgba(77,255,145,.32);
+}
+
+.brand{
+  font-family:"VT323",monospace;
+  font-size:28px;
+  letter-spacing:.14em;
+}
+
+.brand-virus{font-size:31px}
+
+.nav nav{
+  gap:28px;
+  font-size:12px;
+  letter-spacing:.14em;
+}
+
+.nav nav a{
+  opacity:.82;
+  transition:opacity .18s, text-shadow .18s;
+}
+.nav nav a:hover{opacity:1}
+
+.nav-code{
+  font-size:10px;
+  letter-spacing:.12em;
+}
+
+.hero{
+  min-height:920px;
+}
+
+.hero-copy{
+  top:390px;
+  width:min(900px,90vw);
+}
+
+.hero-copy .eyebrow{
+  font-size:16px;
+  letter-spacing:.34em;
+  color:var(--green-soft);
+}
+
+.hero-copy h1{
+  font-size:clamp(110px,15vw,190px);
+  letter-spacing:.19em;
+  margin:18px 0 22px;
+  line-height:.67;
+  text-shadow:
+    0 0 2px #fff,
+    0 0 12px var(--green),
+    0 0 42px rgba(77,255,145,.42);
+}
+
+.tagline{
+  font-size:16px;
+  line-height:1.65;
+  padding:17px 34px;
+  border-color:rgba(77,255,145,.65);
+  background:rgba(0,0,0,.35);
+  box-shadow:0 0 30px rgba(77,255,145,.06),inset 0 0 24px rgba(77,255,145,.035);
+}
+
+.tagline strong{
+  color:var(--green-soft);
+}
+
+.side-copy{
+  top:105px;
+  font-size:14px;
+  line-height:1.55;
+  letter-spacing:.09em;
+}
+
+.virus-orb{
+  top:92px;
+  width:340px;
+  height:340px;
+  border-color:rgba(77,255,145,.82);
+}
+
+.status-bar{
+  margin:0 clamp(20px,5vw,72px);
+  border-color:rgba(77,255,145,.48);
+}
+
+.status-bar>div{
+  padding:20px 25px;
+}
+
+.status-bar small{
+  font-size:10px;
+  letter-spacing:.18em;
+}
+
+.status-bar b{
+  font-size:15px;
+  letter-spacing:.05em;
+}
+
+.launch-strip{
+  max-width:calc(100% - clamp(40px,10vw,144px));
+  margin:16px auto 0;
+  border:1px solid #143f27;
+  background:#020604;
+  padding:12px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  font-size:10px;
+  letter-spacing:.13em;
+  color:#6fa687;
+}
+
+.launch-strip strong{color:var(--green);font-weight:400}
+.launch-dot{color:var(--green);font-size:8px;animation:blink 1.2s steps(1) infinite}
+.launch-sep{color:#245a38}
+
+.section{
+  max-width:1260px;
+  padding:145px clamp(20px,5vw,72px);
+}
+
+.section-title{
+  font-size:22px;
+  font-family:"VT323",monospace;
+  letter-spacing:.22em;
+}
+
+.section-title span{width:120px}
+
+.steps{
+  margin-top:78px;
+}
+
+.step-icon{
+  font-size:43px;
+}
+
+.steps h3{
+  font-size:14px;
+  margin-top:10px;
+}
+
+.steps p{
+  font-size:11px;
+}
+
+.about{
+  grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:90px;
+}
+
+.manifesto .kicker{
+  font-size:12px;
+}
+
+.manifesto h2{
+  font-size:82px;
+  letter-spacing:.07em;
+  margin:18px 0 30px;
+}
+
+.manifesto p{
+  font-size:15px;
+  line-height:1.8;
+}
+
+.commands span{
+  padding:10px 13px;
+  font-size:10px;
+}
+
+.console{
+  grid-template-columns:.78fr 1.22fr;
+}
+
+.data-row{
+  padding:15px 17px;
+  font-size:11px;
+}
+
+.data-row b a:hover{
+  text-shadow:0 0 12px var(--green);
+}
+
+.log{
+  max-width:1260px;
+  margin-bottom:120px;
+}
+
+.logs,.log-actions{
+  padding:22px;
+  font-size:11px;
+}
+
+.final{
+  min-height:560px;
+  padding-top:155px;
+}
+
+.final h2{
+  font-size:76px;
+  letter-spacing:.1em;
+}
+
+footer{
+  padding:22px clamp(20px,5vw,72px);
+}
+
+/* More intentional pixel texture on large headings */
+.hero-copy h1,
+.manifesto h2,
+.final h2{
+  image-rendering:pixelated;
+  -webkit-font-smoothing:none;
+}
+
+/* Responsive typography */
+@media(max-width:850px){
+  .nav{height:68px}
+  .brand{font-size:25px}
+  .nav nav{display:none}
+  .hero-copy{top:350px}
+  .hero-copy h1{font-size:clamp(78px,18vw,120px);letter-spacing:.15em}
+  .hero-copy .eyebrow{font-size:11px}
+  .tagline{font-size:12px}
+  .launch-strip{
+    max-width:calc(100% - 40px);
+    flex-wrap:wrap;
+    text-align:center;
+  }
+  .section{padding-top:105px;padding-bottom:105px}
+  .manifesto h2{font-size:60px}
+  .final h2{font-size:52px}
+}
+
+@media(max-width:480px){
+  .hero{min-height:760px}
+  .virus-orb{width:205px;height:205px;top:105px}
+  .hero-copy{top:305px}
+  .hero-copy h1{font-size:67px;letter-spacing:.12em;margin-top:15px}
+  .hero-copy .eyebrow{font-size:8px;letter-spacing:.22em}
+  .tagline{font-size:10px;padding:12px 16px}
+  .status-bar{grid-template-columns:1fr 1fr}
+  .status-bar>div{padding:13px 12px}
+  .status-bar b{font-size:10px}
+  .launch-strip{font-size:8px;line-height:1.6}
+  .manifesto h2{font-size:49px}
+  .manifesto p{font-size:13px}
+  .final{min-height:450px;padding-top:115px}
+  .final h2{font-size:38px}
+}
