@@ -333,3 +333,218 @@ footer{
   .final{min-height:450px;padding-top:115px}
   .final h2{font-size:38px}
 }
+
+
+/* =========================================================
+   FINAL UX PASS — dense, editorial, intentional
+   ========================================================= */
+html,body{width:100%;min-width:320px}
+body{background:#010201;color:#c8fbd8}
+.nav{height:64px}
+.brand-logo{width:28px;height:28px;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 0 7px rgba(77,255,145,.75))}
+.brand{font-size:25px;gap:10px}
+.nav nav{font-size:11px;gap:22px}
+
+.hero{
+  height:760px;
+  min-height:760px;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 50% 52%,rgba(52,255,130,.09),transparent 27%),
+    linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.45));
+}
+.matrix{inset:0;opacity:.3}
+.side-copy{top:78px;font-size:11px}
+.side-copy.right{right:4.5vw}
+
+.hero-logo-wrap{
+  position:absolute;
+  top:58px;
+  left:50%;
+  transform:translateX(-50%);
+  width:285px;
+  height:285px;
+  z-index:2;
+  display:grid;
+  place-items:center;
+  filter:drop-shadow(0 0 28px rgba(57,255,136,.26));
+  animation:float 6s ease-in-out infinite;
+}
+.hero-logo{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  image-rendering:pixelated;
+  mix-blend-mode:screen;
+}
+.legacy-orb{display:none}
+
+.hero-copy{
+  top:330px;
+  width:100%;
+  z-index:4;
+}
+.hero-copy .eyebrow{
+  font-size:12px;
+  letter-spacing:.28em;
+}
+.hero-copy h1{
+  font-size:clamp(105px,13vw,170px);
+  letter-spacing:.14em;
+  margin:13px 0 14px;
+  line-height:.66;
+}
+.tagline{
+  font-size:13px;
+  padding:13px 27px;
+  letter-spacing:.04em;
+}
+.earth{
+  width:1100px;
+  height:440px;
+  bottom:-315px;
+}
+.hero-cta{bottom:28px}
+.button{font-size:11px;padding:12px 26px}
+
+.status-bar{
+  margin:0 4.5vw;
+}
+.status-bar>div{padding:14px 18px}
+.status-bar b{font-size:13px}
+
+.launch-strip{
+  margin-top:8px;
+  max-width:calc(100% - 9vw);
+  padding:8px 15px;
+  font-size:9px;
+}
+.signal-strip{
+  max-width:calc(100% - 9vw);
+  margin:0 auto;
+  padding:8px 15px;
+  display:flex;
+  justify-content:center;
+  gap:13px;
+  border:1px solid #0d2b1b;
+  border-top:0;
+  color:#416950;
+  font-size:8px;
+  letter-spacing:.12em;
+}
+
+.section{
+  max-width:1280px;
+  padding:92px 4.5vw;
+}
+.outbreak{padding-top:78px}
+.section-title{font-size:19px}
+.section-title span{width:95px}
+.steps{margin-top:46px}
+.step-icon{font-size:34px;height:40px}
+.steps h3{font-size:11px}
+.steps p{font-size:9px}
+
+.about{
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  padding-top:85px;
+}
+.big-ascii{height:310px}
+.mini-virus{font-size:145px}
+.manifesto h2{
+  font-size:67px;
+  line-height:.82;
+  margin:10px 0 20px;
+}
+.manifesto p{
+  font-size:12px;
+  line-height:1.62;
+  margin:8px 0;
+}
+.manifesto .kicker{font-size:10px}
+.commands{margin-top:20px}
+.commands span{font-size:8px;padding:7px 10px}
+
+.console{
+  padding-top:10px;
+  gap:15px;
+}
+.data-row{padding:11px 14px;font-size:9px}
+.map{height:220px}
+
+.log{
+  max-width:1280px;
+  margin:0 auto 70px;
+}
+.logs,.log-actions{padding:16px;font-size:9px}
+.log-face{font-size:36px}
+
+.final{
+  min-height:410px;
+  padding:100px 20px 70px;
+}
+.final h2{
+  font-size:60px;
+  line-height:.85;
+}
+.final p{font-size:8px}
+
+footer{font-size:8px;padding:18px 4.5vw}
+
+/* Crisp pixels without making everything look like a template */
+.window-head,.data-row,.button,.status-bar,.launch-strip,.signal-strip,.log{
+  border-color:rgba(77,255,145,.36);
+}
+.window-head{font-size:9px}
+
+/* Desktop: use the screen instead of giant empty vertical bands */
+@media(min-width:1100px){
+  .hero-copy h1{font-size:154px}
+  .hero-logo-wrap{width:270px;height:270px}
+  .hero-copy{top:326px}
+}
+
+/* Tablet */
+@media(max-width:850px){
+  .hero{height:720px;min-height:720px}
+  .hero-logo-wrap{width:220px;height:220px;top:70px}
+  .hero-copy{top:285px}
+  .hero-copy h1{font-size:88px}
+  .earth{width:780px;height:360px;bottom:-270px}
+  .hero-cta{bottom:24px}
+  .about{grid-template-columns:1fr;gap:35px}
+}
+
+/* Phone: dense and legible, never tiny */
+@media(max-width:520px){
+  .nav{height:58px;padding:0 16px}
+  .brand{font-size:22px}
+  .brand-logo{width:23px;height:23px}
+  .nav-code{display:none}
+  .hero{height:650px;min-height:650px}
+  .side-copy{display:none}
+  .hero-logo-wrap{width:180px;height:180px;top:60px}
+  .hero-copy{top:238px}
+  .hero-copy .eyebrow{font-size:8px}
+  .hero-copy h1{font-size:66px;margin:10px 0 12px}
+  .tagline{font-size:9px;padding:10px 13px}
+  .earth{width:620px;height:300px;bottom:-230px}
+  .hero-cta{bottom:17px}
+  .button{font-size:9px;padding:10px 17px}
+  .status-bar{margin:0 12px}
+  .status-bar>div{padding:10px 9px}
+  .status-bar small{font-size:7px}
+  .status-bar b{font-size:9px}
+  .launch-strip,.signal-strip{max-width:calc(100% - 24px);font-size:7px}
+  .signal-strip{gap:7px;flex-wrap:wrap}
+  .section{padding:68px 18px}
+  .steps{margin-top:35px}
+  .about{padding-top:65px}
+  .manifesto h2{font-size:51px}
+  .manifesto p{font-size:11px}
+  .console{padding-top:0}
+  .final{min-height:330px;padding-top:80px}
+  .final h2{font-size:40px}
+  footer{font-size:7px;text-align:center;display:flex;gap:7px}
+}
