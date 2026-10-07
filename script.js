@@ -2,7 +2,7 @@ const hosts = document.getElementById("hosts");
 const bars = document.getElementById("bars");
 
 // Static project snapshot — no external API/data is used.
-const holderCount = 841;
+const holderCount = 0;
 hosts.textContent = String(holderCount).padStart(6, "0");
 
 function renderBars(){
