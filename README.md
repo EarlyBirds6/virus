@@ -19,4 +19,4 @@ From this folder:
 
     npx vercel
 
-The page intentionally contains no live token contract, wallet connection, API, market data, or Twitter URL yet. Replace the classified/TBA placeholders when those details are ready.
+The page intentionally contains the live token contract, wallet connection, API, market data, or Twitter URL yet. Replace the contract details when those details are ready.
